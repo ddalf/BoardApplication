@@ -28,16 +28,20 @@ public class User extends DateTime implements Serializable {
     @Column(length = 30)
     private String email;
 
+    @Column(length = 20)
+    private String phonenumber;
+
     @Column
     private String sessionId;
 
     @Builder
-    public User(Long id, String userId, String password, String name, String email, String sessionId) {
+    public User(Long id, String userId, String password, String name, String email, String phonenumber, String sessionId) {
         this.id = id;
         this.userId = userId;
         this.password = password;
         this.name = name;
         this.email = email;
+        this.phonenumber = phonenumber;
         this.sessionId = sessionId;
     }
 
